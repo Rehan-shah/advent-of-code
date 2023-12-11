@@ -22,9 +22,6 @@ String.prototype.isDigit = function (): boolean {
     return !Number.isNaN(Number(this.toString()))
 }
 
-// console.log("1" ,"1".isDigit())
-// console.log("?" ,"?".isDigit())
-// console.log("0" ,"0".isDigit())
 
 String.prototype.isSymbol = function (): boolean {
     const re = /[^\w\s.]/g;
@@ -54,7 +51,6 @@ const checkNearBy = (x: number , y : number ):boolean => {
 let sum = 0
 let number = ""
 let addNumer = false
-const hi =[]
 
 
 list.forEach((row , i) => {

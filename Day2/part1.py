@@ -38,7 +38,9 @@ for list in lists:
     game_no = int(list[: list.index(":")].replace("Game", "").strip())
     games = list[list.index(":") + 1 :].strip().split(";")
     print(game_no)
-    doesGameFollowRule = True
+    no_blue = 0
+    no_red = 0
+    no_green = 0
     for game in games:
         for ball_color in game.split(","):
             for color in ["blue", "green", "red"]:
@@ -46,8 +48,6 @@ for list in lists:
                     pass
                 else:
                     doesGameFollowRule = False
-    if doesGameFollowRule:
-        sum_game += game_no
 
 
 print("The answer ", sum_game)
